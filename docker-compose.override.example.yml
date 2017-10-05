@@ -1,0 +1,19 @@
+version: "3.3"
+
+services:
+  web:
+    ports:
+      - "3000:80"
+
+    volumes:
+      - .:/app
+
+  psp:
+    volumes:
+      - ./psp:/app
+
+  api:
+    volumes:
+      - ./api:/app
+    tty: true
+    stdin_open: true
